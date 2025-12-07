@@ -1,6 +1,10 @@
 import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
 
+
+
 export component AppWindow inherits Window {
+    property <string> results: "";
+    callback device-income(string);
     background: #313e50;
     GridLayout {
         padding: 50px;
@@ -15,7 +19,7 @@ export component AppWindow inherits Window {
         }
 
         Row {
-            LineEdit {
+            income := LineEdit {
                 horizontal-alignment: center;
                 font-size: 16px;
                 placeholder-text: "Ihr Gehalt eingeben";
@@ -28,6 +32,9 @@ export component AppWindow inherits Window {
                 text: "Berechnen";
                 primary: true;
                 height: 35px;
+                clicked => {
+                    device-income(income.text);
+                }
             }
         }
     }
