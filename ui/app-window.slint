@@ -3,7 +3,7 @@ import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
 
 
 export component AppWindow inherits Window {
-    property <string> results: "";
+    in property <string> results: "";
     callback device-income(string);
     background: #313e50;
     GridLayout {
