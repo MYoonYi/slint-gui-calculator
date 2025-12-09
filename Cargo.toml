@@ -1,12 +1,19 @@
 [package]
-name = "slint-rust-template"
+authors = ["MYoonYi"]
+
+name = "slint_rust_template"
 version = "0.1.0"
 edition = "2021"
-
+description = "Eine Übung für einen Gehaltsrechner mit Slint und Rust"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+cargo-wix = "0.3.9"
 slint = "1.14.1"
 
 [build-dependencies]
 slint-build = "1.14.1"
+
+[package.metadata.bundle]
+name = "slint Rust Gehaltsrechner"
+identifier = "io.github.MYoonYi.slint-gui-calculator"
